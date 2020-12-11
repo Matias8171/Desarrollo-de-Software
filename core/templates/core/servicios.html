@@ -1,0 +1,94 @@
+{% extends 'core/base.html'%}
+<title>{% block title%}Servicios{% endblock title %}
+{% load static %}
+{% block content %}
+
+    <main class="container">
+        <hr>
+        <div class="container mt-2 mb-2">
+            <h3 class="display-6">Nuestros servicios</h3>
+            <div class="row">
+                <div class="col-md-4 mt-4 mb-4">
+                    <img src="{% static 'core/images/recordatorio2.png'%}" alt="Imagen" style="width:80%">
+                    <h5>Recordatorio de ingesta de medicamentos.</h5>
+                    <p>Este servicio consta de un recordatorio en su celular o en su teléfono fijo, para no olvidar tomar su medicina.</p>
+                    </div>
+                <div class="col-md-4 mt-4 mb-4">
+                    <img src="{% static 'core/images/display.png'%}" alt="Imagen" style="width:110%">
+                    <h5>Control de stock de medicamentos.</h5>
+                    <p>Nuestro servicio de control d estock de medicamentos tiene como objetivo evitar que nuestro adulto mayor se quede sin medicamentos, indicando una semana antes y a diario cuando se le agotarán.</p>               
+                </div>
+                <div class="col-md-4 mt-4 mb-4">
+                    <img src="{% static 'core/images/horas.png'%}" alt="Imagen" style="width:110%">
+                    <h5>Solicitud de horas médicas.</h5>
+                    <p>Como parte de nuestros servicios, tenemos a disposición el agendamiento de horas médicas para nuestros adultos mayores</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        </div>
+        <hr>
+        <div class="container mt-2 mb-2">
+            <h3 class="display-6">Nuestros Objetivos</h3>
+            <div class="row">
+                <div class="col-md-4 mt-2 mb-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="{% static 'core/images/adultos.png'%}" alt="Imagen" style="width:73%">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Valores</h4>
+                            <h6 class="card-subtitle text-muted mb-2">Nuestro valores:</h5>
+                                <p class="card-text">Impedir el olvido de medicamentos y la suspensión de algún tratamiento con el fin de no afectar la salud del paciente, como también evitar perder las horas, y a su vez, no quedar sin stock de medicamentos, es por esto que el sistema avisa antes de que se le acaben, en resumen, mantener la adherencia a los tratamientos del paciente y por cierto proponer un esquema que permita tener una comunicación con el Paciente de tal forma que asegure una comunicación efectiva y segura.</p>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-md-4 mt-2 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'core/images/abuelos.png'%}" alt="Imagen" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Misión:</h4>
+                            <h6 class="card-subtitle text-muted mb-2">Nuestra misión:</h5>
+                                <p class="card-text">Con esto lo que buscamos generar adherencia al tratamiento con el propósito que los pacientes no olviden o dejen su tratamiento, y tengan presente sus consultas médicas, exámenes y evitar que se descontinúe su tratamiento o que se quede sin sus remedios por falta de stock u olvido quedarse sin su medicina evitando visitas innecesarias a los centros médicos, también a sacar horas para consultas, toma de exámenes y evitar las largas esperas sin que estos efectivamente estén.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'core/images/adultos2.png'%}" alt="Imagen" style="width:108%">
+                        <div class="card-body">
+                            <h4 class="card-title">Visión:</h4>
+                            <h6 class="card-subtitle text-muted mb-2">Nuestra visión:</h5>
+                                <p class="card-text">Sabemos que los adultos mayores olvidan las cosas a diario, más aún lo hacen con un tratamiento en base a medicamentos, por lo mismo y con el fin de evitar el olvido de sus remedios es que hemos creado esta aplicación, pensada para adultos mayores o sus apoderados en caso de que sean dependientes. La aplicación tiene como opción llamar por telefono para realizar los recordatorrios, esto pensado para los adultos mayores con visibilidad limitada o que quiera utilizar un smartphone.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Media Object -->
+        <div class="container mt-4 mb-4">
+            <h3 class="display-6">Comentarios</h3>
+            <div class="media border rounded-sm p-3">
+                <img class="mr-3 mt-3 rounded-circle" src="{% static 'core/images/usuario1.png'%}" alt="Imagen" style="width: 100px;">
+                <div class="media-body">
+                    <h4>José Rojas <small><i>Creado el 08 de Octubre de 2020</i></small></h4>
+                    <p>Buenas noches, soy el tutor de mi mamá, estoy muy agradecido de la aplicación, nos ha hecho la vida mucho mas simple desde que la instalamos.</p>
+                    <p>Solo tengo una duda, como se puede personalizar el sonido de las alarmas?.</p>
+                    <p>Quedo atento, Gracias.</p>
+                    <div class="media p-3">
+                        <img class="mr-3 mt-3 rounded-circle" src="{% static 'core/images/usuario2.png'%}" alt="Imagen" style="width: 50px;">
+                        <div class="media-body">
+                            <h4>Servicio de Atención al Cliente<small><i> Creado el 09 de Octubre de 2020</i></small></h4>
+                            <p>José, gusto en saludarte y nos alegramos que te guste la aplicación, de momento la versión actual no tiene la opción que mencionas.</p>
+                            <p>Estamos desarrollando una nueva versión de la aplicación, por lo que pronto la opción que necesitas estará disponible.</p>
+                            <p>Saludos, Servicio de atención al Cliente.</p>
+                        </div>
+
+                    </div>
+                </div>                
+            </div>            
+        </div>
+    </main>
+    {% endblock %}

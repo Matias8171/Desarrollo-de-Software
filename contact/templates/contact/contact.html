@@ -1,0 +1,46 @@
+{% extends 'core/base.html'%}
+<title>{% block title%}contacto{% endblock title %}
+{% load static %}
+{% block content %}
+		
+					<!-- One -->
+					
+						<section class="wrapper style4 special container medium">
+						    {% if 'aceptado' in request.GET %}
+                                <p class="text-primary"><strong>El mensaje se ha enviado correctamente</strong></p>
+                            {% endif %}
+                            {% if 'rechazado' in request.GET %}
+                                <p class="text-danger"><strong>No se puede enviar el mensaje, Inténtelo mas tarde</strong></p>
+                            {% endif %}
+					<!-- Formulario -->
+							<Content >
+								<form action="" method="POST">
+								{% csrf_token %}
+								<div class="content">
+									<form>
+										<div class="row gtr-50">
+											<div class="col-6 col-12-mobile">
+											<label>Nombre* </label>
+												{{form.name}} 
+											</div>
+											{{form.name.errors}}
+											<div class="col-6 col-12-mobile">
+											<label>Email* </label>
+												{{form.email}}
+											</div>
+											{{form.email.errors}}
+											<div class="col-12">
+											<label>Mensaje*</label>
+												{{form.message}}
+											</div>
+											{{form.message.errors}}
+											<div class="col-12">
+												<ul class="buttons">
+													<li><input type="submit" class="special" value="Enviar Mensaje" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+						</section>
+{% endblock %}

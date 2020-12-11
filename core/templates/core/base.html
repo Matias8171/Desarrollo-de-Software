@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Record  Recordatorio remoto para medicamentos de Pacientes
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{% block title%}{% endblock title %} | RRPMP</title>
+        {% load static %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'core/assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'core/assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="index is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1 id="logo"><a href="{% url 'home' %}">RRPMP </a></h1>
+					<nav id="nav">
+						<ul>
+							<li> <a href="{% url 'portfolio' %}">Proyectos</a></li>
+                            <li>  <a href="{% url 'acercade' %}">Acerca De</a></li>
+                            <li><a href="{% url 'contact' %}">Contacto</a></li>
+                            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                            <li><a href="{% url 'home' %}">Inicio</a></li>
+							<li class="submenu">
+								<ul>
+								</ul>
+							</li>
+							<li><a href="{% url 'home' %}" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+
+			<!-- Banner -->
+				<section id="banner">
+				</section>
+
+			<!-- Contenido Principal -->	
+		 	
+			</div class ="container">
+				{% block content %}{% endblock %}
+			</div>
+
+
+
+
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					
+					<ul class="icons">
+						{%if LINK_TWITTER%}
+						<li><a href="{{LINK_TWITTER}}" class="icon brands circle fa-twitter" target="_black"><span class="label">Twitter</span></a></li>
+						{%endif %}
+						{%if LINK_FACEBOOK%}
+						<li><a href="{{LINK_FACEBOOK}}" class="icon brands circle fa-facebook-f" target="_black"><span class="label">Facebook</span></a></li>
+						{%endif %}
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; RRPMP Copyright © 2020 RRMP SA. Todos los derechos reservados. Dirección Lira 278, Santiago. Teléfono 226636363</li>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'core/assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'core/assets/js/jquery.dropotron.min.js'%}"></script>
+			<script src="{% static 'core/assets/js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'core/"assets/js/jquery.scrollex.min.js'%}"></script>
+			<script src="{% static 'core/assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'core/assets/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'core/assets/js/util.js'%}"></script>
+			<script src="{% static 'core/assets/js/main.js'%}"></script>
+
+
+		<!-- Link -->
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/styles.css' %}" rel="stylesheet">
+	</body>
+</html>

@@ -1,0 +1,58 @@
+{% extends 'core/base.html'%}
+<title>{% block title%}portafolio{% endblock title %}
+{% load static %}
+{% block Headers %}{% endblock Headers %}
+{% block content %}
+	{% for project in projects%}
+			<!-- Proyecto 1 -->
+                        <section class="wrapper style3 container special">
+                           
+							<header class="major">
+								<div class="col-lg-3 col-md-4 offset lg-1">
+                                    <img class ="img-fuild" src="{{project.image.url}}" alt="">	
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                        <h2 class="section-heading title">{{project.title}}</h2>
+										<p>{{project.descripcion}}</p>
+										{% if project.link%}
+											<p><a href ="{{project.link}}" target="_blank"> Mas información</a></p>
+										{% endif %}
+								</div>
+							</div>
+                        </section>
+				</article>
+	{%endfor%}
+
+    {% if projects.has_other_pages %}
+    
+        <div class="row justify-content-center text-secondary mt-4 mb-4">
+            <nav>
+                <ul class="pagination">
+                    {% if projects.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ projects.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>    
+                    {% endif %}
+                    
+                    {% for i in projects.paginator.page_range %}
+                        {% if projects.number == i %}
+                            <li class="page-item active"><span class="page-link" href="?page={{i}}">{{i}}<span class="sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>  
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if projects.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ projects.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&raquo;</span></li>    
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    {% endif %}
+
+
+
+
+{% endblock %}
